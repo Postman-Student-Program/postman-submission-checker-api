@@ -6,6 +6,7 @@
 - prettier
 - typescript
 - ts-node (dev)
+- nodemon
 
 ### Install
 
