@@ -47,3 +47,19 @@ interface Script {
   type: string
   exec: string[]
 }
+
+// utils/testCollection
+interface TestCollectionArgs {
+  testCollectionUrl: string
+  submissionCollectionUrl: string
+}
+
+type TestCollectionResult = {
+  allTestsPassed: boolean
+  failures?: Failure[]
+}
+
+interface Failure {
+  test: string
+  message: string
+}

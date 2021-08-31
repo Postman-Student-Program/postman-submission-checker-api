@@ -16,7 +16,7 @@ paths:
                 type: string
   /check:
     post:
-      summary: 'Runs server-side tests on a given collectionUrl'
+      summary: 'Runs server-side tests on a given submissionUrl (.json file link)'
       operationId: check
       requestBody:
         required: true
@@ -25,11 +25,11 @@ paths:
             schema:
               type: object
               properties:
-                collectionUrl:
+                submissionUrl:
                   type: string
                   minLength: 15
               required:
-                - collectionUrl
+                - submissionUrl
       responses:
         '200':
           description: 'Submission processed successfully'
