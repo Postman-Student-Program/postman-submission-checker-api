@@ -7,7 +7,9 @@
   "scripts": {
     "start": "nodemon",
     "tcheck": "tsc --noEmit",
-    "build": "tsc",
+    "build": "yarn clean && tsc && yarn copy-spec",
+    "copy-spec": "cp src/schema.yaml dist/schema.yaml",
+    "clean": "rm -fr dist",
     "serve": "node dist/src/index.js",
     "lint": "eslint ."
   },
