@@ -41,10 +41,12 @@ If any tests fail, a response like below will be returned
 ```json
 {
   "allTestsPassed": false,
-  "failures": [{
+  "failures": [
+    {
       "test": "Name of failed test",
-      "message: "Some message about the failure reason"
-   }]
+      "message": "Some message about the failure reason"
+    }
+  ]
 }
 ```
 
