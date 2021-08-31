@@ -1,0 +1,86 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Postman Submission Checker API
+servers:
+  - url: 'https://classroom-program-student-work-submit-staging.glitch.me'
+paths:
+  /:
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /check:
+    post:
+      summary: 'Runs server-side tests on a given collectionUrl'
+      operationId: check
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                collectionUrl:
+                  type: string
+                  minLength: 15
+              required:
+                - collectionUrl
+      responses:
+        '200':
+          description: 'Submission processed successfully'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum: [ok]
+                  allTestsPassed:
+                    type: boolean
+                  failedTests:
+                    type: array
+                    items:
+                      type: string
+                required:
+                  - status
+                  - allTestsPassed
+        '400':
+          description: 'Bad request'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: 'Collection not found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: 'Unexpected error'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Error:
+      type: object
+      required:
+        - status
+        - message
+      properties:
+        status:
+          type: string
+          enum: [error]
+        message:
+          type: string
+        errors:
+          type: array
+          items: {} # any type. This property supplied in case of request validation errors
