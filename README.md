@@ -16,13 +16,13 @@ This collection should use GET `{{submissionUrl}}` (by default - or you can chan
 
 Here is an example test, used for student expert submission checking: [example](https://postman.postman.co/workspace/Training-Processing~f20c42fd-3898-4fe3-977a-eb953781cff1/request/15567703-36eb6066-6aa4-4994-b9bf-0829bd88c80b)
 
-#### Configure
+#### Configure API
 
 Specific which Postman collection will be used to run the tests by pasting the JSON url for the end var `TEST_COLLECTION_URL`.
 
 #### Deploy
 
-Host on Heroku or Glitch, etc.
+Host on Heroku or Glitch, etc. Set up necessary env vars.
 
 #### Hit API
 
