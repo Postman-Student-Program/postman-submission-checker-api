@@ -1,7 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 
-const defaultServerErrorMsg = 'Internal server error'
+const DEFAULT_ERROR_MESSAGE = 'Internal server error'
 
+/** apply error handler to catch any errors passed to next() */
 const handleErrors = (
   // eslint-disable-next-line
   err: any,
@@ -12,7 +13,7 @@ const handleErrors = (
   console.error(err)
   res.status(err.status || 500).send({
     status: 'error',
-    message: err.message || defaultServerErrorMsg,
+    message: err.message || DEFAULT_ERROR_MESSAGE,
     errors: err.errors
   })
 }

@@ -5,16 +5,15 @@
   "author": "Claire Froelich",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon -r dotenv/config",
+    "start": "nodemon",
     "tcheck": "tsc --noEmit",
     "build": "yarn clean && tsc && yarn copy-spec",
     "copy-spec": "cp src/schema.yaml dist/schema.yaml",
     "clean": "rm -fr dist",
-    "serve": "node dist/src/index.js",
+    "serve": "node dist/index.js",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@types/newman": "^5.1.4",
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "express": "4.17.1",
@@ -23,6 +22,7 @@
   },
   "devDependencies": {
     "@types/express": "4.17.12",
+    "@types/newman": "^5.1.4",
     "@types/node": "15.12.4",
     "@typescript-eslint/eslint-plugin": "4.27.0",
     "@typescript-eslint/parser": "4.27.0",
