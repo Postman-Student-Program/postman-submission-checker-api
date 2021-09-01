@@ -16,6 +16,12 @@ This collection should use GET `{{submissionUrl}}` (by default - or you can chan
 
 Here is an example test, used for student expert submission checking: [example](https://postman.postman.co/workspace/Training-Processing~f20c42fd-3898-4fe3-977a-eb953781cff1/request/15567703-36eb6066-6aa4-4994-b9bf-0829bd88c80b)
 
+#### Get Test collection JSON URL
+
+In Postman, get a link to a JSON representation of the collection: "Share collection" > "via JSON"
+
+> Note: Whenever you edit the test collection, be share to visit the above dialog and click "Update" for changes to be reflected in the URL.
+
 #### Configure API
 
 Specific which Postman collection will be used to run the tests by pasting the JSON url for the end var `TEST_COLLECTION_URL`.
@@ -51,6 +57,10 @@ If any tests fail, a response like below will be returned
 ```
 
 ### For developers
+
+#### Node version
+
+This project uses `node` v `16.0.0`. Use a node version manager such as [`n`](https://www.npmjs.com/package/n) to develop with this version.
 
 #### Install
 
