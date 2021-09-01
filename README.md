@@ -73,3 +73,23 @@ This project uses `node` v `16.0.0`. Use a node version manager such as [`n`](ht
 #### Build + serve
 
 `yarn build && yarn serve`
+
+#### Student Expert training checker - Deployment
+
+Here is the remote URL for the student expert checker prod server `https://git.heroku.com/pm-student-expert-checker.git`
+
+If you are a developer with permissions on this project, you can add this remote to git like so:
+
+`git remote add heroku https://git.heroku.com/pm-student-expert-checker.git`
+
+Then you can deploy changes by pushing to `main` in the heroku repo:
+
+```
+git add .
+git commit -m "your commit message"
+
+git push heroku main
+```
+
+If you have the [Heroku CLI tool](https://devcenter.heroku.com/articles/heroku-cli), you can check the server logs:
+`heroku logs`

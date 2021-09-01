@@ -13,7 +13,7 @@
     "build": "yarn clean && tsc && yarn copy-spec",
     "copy-spec": "cp src/schema.yaml dist/schema.yaml",
     "clean": "rm -fr dist",
-    "postinstall": "tsc && npm run copy-spec",
+    "postinstall": "yarn clean && tsc && npm run copy-spec",
     "serve": "node dist/index.js",
     "lint": "eslint ."
   },
