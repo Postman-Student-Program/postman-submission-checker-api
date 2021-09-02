@@ -31,7 +31,7 @@ const NUM_OF_URLS = 100
 for (i = 0; i < NUM_OF_URLS; i++) {
   testUrls.push(pluck(submissionUrls))
 }
-console.log({ testUrls })
+
 ;(async () => {
   const promises = testUrls.map((url) => testSubmission(url))
   const result = await Promise.allSettled(promises)
