@@ -8,7 +8,7 @@ const testSubmission = async (submissionUrl) => {
       submissionUrl
     }
   })
-  const data = res.data
+  const { data } = res
   return data
 }
 
