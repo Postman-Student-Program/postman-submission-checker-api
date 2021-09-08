@@ -13,7 +13,7 @@ export const postCheck = async (
   try {
     await fetchCollection(submissionUrl)
   } catch (err) {
-    if (err.response.status === 404) {
+    if (err.response && err.response.status === 404) {
       const error = new Error('Collection not found') as any
       error.status = 404
       return next(error)
