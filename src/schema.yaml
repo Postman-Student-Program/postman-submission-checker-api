@@ -28,6 +28,7 @@ paths:
                 submissionUrl:
                   type: string
                   minLength: 15
+                  pattern: '^https:\/\/www.getpostman.com\/collections\/'
               required:
                 - submissionUrl
       responses:
