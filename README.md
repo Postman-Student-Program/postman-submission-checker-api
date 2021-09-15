@@ -2,7 +2,7 @@
 
 No more cheating on tests! An API template for running server-side tests on variable collections.
 
-This is useful for instances where you don't want the client to alter the client-side tests and "cheat" their way into a badge.
+This is useful for instances where you need to test multiple collections against the same test script, and you don't want the client to alter client-side tests and "cheat" their way into passing.
 
 The template is set up to accomodate one endpoint by default, but you can easily add additional endpoints if you want to manage multiple different tests from the same server.
 
