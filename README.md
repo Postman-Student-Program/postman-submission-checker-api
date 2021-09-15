@@ -32,7 +32,7 @@ Host on Heroku or Glitch, etc. Set up necessary env vars.
 
 #### Hit API
 
-Hit the API `/check` with the `submissionUrl`.
+Hit the API `/check` with the body `{ submissionUrl: <submission URL> }`.
 
 If the submission passes all the tests, the API will return a response like below
 
