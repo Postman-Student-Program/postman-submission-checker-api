@@ -24,7 +24,7 @@ In Postman, get a link to a JSON representation of the collection: "Share collec
 
 #### Configure API
 
-Specific which Postman collection will be used to run the tests by pasting the JSON url for the end var `TEST_COLLECTION_URL`.
+Specify which Postman collection will be used to run the tests by pasting the JSON url for the end var `TEST_COLLECTION_URL`.
 
 #### Deploy
 
