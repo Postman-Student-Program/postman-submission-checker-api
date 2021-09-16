@@ -62,6 +62,21 @@ If any tests fail, a response like below will be returned
 }
 ```
 
+### Allowing multiple or dynamic test collection URLs
+
+The template as-is hard codes one test collection as an environemnt variable on the server. 
+
+There are a few options for extending on this to allow multiple test collections:
+
+**Add endpoints**
+
+You could define additional environment variables (ex: `TEST_COLLECTION_URL_FOO`, `TEST_COLLECTION_URL_BAR`, `TEST_COLLECTION_URL_BAZ`), and make dedicated endpoints for each test (ex: `/check/foo`, `check/bar`, `check/baz`)
+
+**Define test collection URL in request body**
+
+If you would rather allow the test collection URL to be dynamic and defined on request, feel free to remove the `TEST_COLLECTION_URL` checks in `index.ts`, and add `testCollectionUrl` as another expected property on the request body for the `/check` endpoint and in the `schema.yaml` spec.
+
+
 ### For developers
 
 #### Node version
