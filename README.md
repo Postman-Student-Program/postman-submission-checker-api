@@ -72,10 +72,13 @@ There are a few options for extending on this to allow multiple test collections
 
 You could define additional environment variables (ex: `TEST_COLLECTION_URL_FOO`, `TEST_COLLECTION_URL_BAR`, `TEST_COLLECTION_URL_BAZ`), and make dedicated endpoints for each test (ex: `/check/foo`, `check/bar`, `check/baz`)
 
+This solution is ideal if you are making client-side API calls and want to make sure the client cannot alter the test collection URLs.
+
 **Define test collection URL in request body**
 
 If you would rather allow the test collection URL to be dynamic and defined on request, feel free to remove the `TEST_COLLECTION_URL` checks in `index.ts`, and add `testCollectionUrl` as another expected property on the request body for the `/check` endpoint and in the `schema.yaml` spec.
 
+This solution is ideal if you a) are making server-side API calls (test collection URLs cannot be altered by client), and/or b) you want to be able to specifify the test collection URL(s) without re-deploying the server code.
 
 ### For developers
 
