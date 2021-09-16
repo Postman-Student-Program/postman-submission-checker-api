@@ -28,7 +28,13 @@ Specify which Postman collection will be used to run the tests by pasting the JS
 
 #### Deploy
 
-Host on Heroku or Glitch, etc. Set up necessary env vars.
+Set up necessary env vars (`TEST_COLLECTION_URL`).
+
+In order to start the server run: 
+
+`yarn build && yarn serve`
+
+This compiles the TypeScript, copies the schema.yaml file (used to validate requests), and starts the node server.
 
 #### Hit API
 
