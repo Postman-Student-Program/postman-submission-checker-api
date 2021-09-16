@@ -76,9 +76,7 @@ This project uses `node` v `16.0.0`. Use a node version manager such as [`n`](ht
 
 #### Student Expert training checker - Deployment
 
-Here is the remote URL for the student expert checker prod server `https://git.heroku.com/pm-student-expert-checker.git`
-
-If you are a developer with permissions on this project, you can add this remote to git like so:
+If you are a developer with permissions on the Student Expert Submission checker server, you can add this remote to git like so:
 
 `git remote add heroku https://git.heroku.com/pm-student-expert-checker.git`
 
